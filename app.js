@@ -152,3 +152,6 @@ function detailAnimation(){
 window.addEventListener('mousemove', cursor);
 window.addEventListener('mouseover', activeCursor);
 burger.addEventListener('click', navToggle);
+document.querySelector('.nav-links a:last-child').addEventListener('click', function(){
+    alert(`I don't have one yet :)`);
+});
