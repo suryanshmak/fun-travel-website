@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;400&family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #17181a;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+#logo {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+header {
+    position: relative;
+    height: 10vh;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0 0 0; 
+    z-index: 2;
+}
+.line1, .line2, .line3 {
+    width: 32px;
+    height: 0.2rem;
+    background: white;
+    margin: 0.4rem;
+    border-radius: 5px;
+    pointer-events: none;
+    
+}
+.slide {
+    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.hero-des {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-basis: 25rem;
+    position: relative;
+    padding-left: 5rem;
+}
+.hero-img {
+    position: relative;
+    flex: 1;
+    flex-basis: 25rem;
+    height: 60vh;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fashion-span { 
+    color: rgb(255, 139, 93);
+    font-family: 'Montserrat', sans-serif;
+}
+.mountain-span { 
+    color: rgb(86, 124, 228);
+    font-family: 'Montserrat', sans-serif;
+}
+.hike-span { 
+    color: rgb(167, 110, 231);
+    font-family: 'Montserrat', sans-serif;
+}
+.hero-des h2 {
+    font-family: 'Open Sans';
+    font-size: 3.5rem;
+    background: #17181a;
+
+}
+.hero-des p {
+    padding: 3rem 0;
+    font-size: 1.5rem;
+    color: rgb(230, 230, 230);
+}
+.explore {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    border: 0.8px solid white;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.explore:hover {
+    background: white;
+    color: black;    
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    opacity: 1;
+    clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%);
+}
+.burger {
+    cursor: pointer;
+    z-index: 2;
+}
+.nav-links {
+    position: relative;
+    font-size: 3.5rem;
+    flex-basis: 15rem;
+    margin-left: 13%;
+    display: flex;
+    flex-direction: column;
+ }
+.nav-links a { 
+    font-size: 3.5rem;
+    margin-top: 15vh;
+    cursor: pointer;
+}
+.nav-links a:first-child {
+    margin-top: 0;
+}
+.contact {
+    flex-basis: 50rem;
+}
+.contact h2 {
+    font-size: 3rem;
+    padding: 2rem 8rem;
+}
+.contact-info {
+    font-size: 1.5rem;
+    padding: 0 8rem;
+}
+.contact-info a {
+    color: rgb(255, 139, 93);
+}
+@media screen and (min-width: 800px){
+    
+
+.first:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 18%;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+.second:before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 5px;
+  top: 60%;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+.third:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 5px;
+  bottom: -3%;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+ }
+}
+.first:hover:before, .second:hover:before, .third:hover:before  {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.nav-links a:visited, .nav-links a, .nav-links:link {
+    color: black;
+    text-decoration: none;
+}
+
+.reveal-img, .reveal-text {
+    position: absolute;
+    background: #17181a;
+    width: 100%;
+    height: 150%;
+    left: 0;
+    top: -15%;
+}
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    transition-property: background, transform;
+    transform-origin: 75% 75%;
+}
+
+.cursor.nav-active {
+    background: rgb(86, 124, 228);
+    transform: scale(2);
+}
+.cursor.explore-active {
+    background: white;
+    transform: scale(2);
+}
+.cursor-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.5rem;
+}
+.title {
+    position: relative;
+    overflow: hidden;
+}
+.title-swipe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: darken;
+    transform: translateY(100%);
+}
+.t-swipe1 {
+    background: rgb(86, 124, 228);
+}
+.t-swipe2 {
+    background:rgb(167, 110, 231);
+}
+.t-swipe3 {
+    background:rgb(255, 139, 93);
+}
+.scrollmagic-pin-spacer {
+    position: static !important;
+}
+
+body.hide {
+    overflow: hidden;
+}
+
+/* NEXT PAGE */
+
+.fashion1, .fashion2, .fashion3 {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    color: white;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    position: relative;
+}
+.fashion1 h1, .fashion2 h1, .fashion3 h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4.5rem;
+    padding: 2rem 0;
+} 
+.fashion-img {
+    height: 70vh;
+    flex-basis: 30rem;
+}
+.fashion-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.fashion-text {
+    flex: 1;
+    position: relative;
+    flex-basis: 30rem;
+}
+
+.fashion1 h1 {
+    color: rgb(255, 139, 93);
+}
+.fashion2 h1 {
+    color:rgb(30, 236, 92);
+}
+.fashion3 h1 {
+    color: rgb(86, 124, 228);
+}
+.fashion-text p {
+    font-size: 1.8rem;
+    padding: 2rem 2rem 0 0;
+    margin-bottom: 10rem;
+}
+.swipe {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+.swipe1 {
+    background: rgb(167, 110, 231);
+    z-index: 5;
+}
+.swipe2 {
+    background: rgb(86, 124, 228);
+    z-index: 4;
+}
+.swipe3 {
+    background: rgb(255, 139, 93);
+    z-index: 3;
+}
+
+
+@media screen and (max-width: 1024px){
+   main {
+    width: 100%;  
+    margin: 0;
+   }
+   .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+   }
+   .hero-des {
+       padding: 0;
+   }
+   .hero-des h2 {
+       font-size: 1.5rem;
+       padding: 1rem 0;
+   }
+   .hero-des p {
+       padding: 2rem 1rem;
+       font-size: 1rem;
+       line-height: 1.5rem;
+       text-align: center;
+   }
+   .explore {
+       width: 50%;
+       margin: 0 auto 0 auto;
+   }
+   .hero-img{
+       padding-top: 2rem;
+   }
+   .cursor {
+       display: none;
+   }
+   .detail-slide {
+       width: 100%;
+       text-align: center; 
+   }
+   .fashion-text p{
+       margin-bottom: 5rem;
+       padding: 0;
+       font-size: 1.5rem;
+   }
+   .fashion-text h1 {
+       font-size: 3rem;
+       margin: 2rem 0;
+   }
+   .nav-bar {
+    display: block;
+   }
+   .nav-links a{
+       text-align: center;
+       font-size: 2rem;
+       padding: 0;
+       margin: 0;
+   }
+   /* .nav-links a:first-child {
+       margin-top: 15vh;
+   } */
+   .contact h2 {
+       font-size: 2.5rem;
+   }
+   .contact p {
+       font-size: 1.5rem;
+       padding: 1rem;
+   }
+   .nav-bar {
+       overflow-y: scroll;
+   }
+   .header {
+       font-size: 1rem;
+   }
+}
